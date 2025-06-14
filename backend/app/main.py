@@ -2,10 +2,12 @@ from fastapi import FastAPI
 from fastapi.openapi.utils import get_openapi
 from fastapi.middleware.cors import CORSMiddleware
 from app.api import auth, products, cart, orders, websocket_cart, admin
+import os
 
 app = FastAPI()
 
 origins = [
+    os.getenv("FRONTEND_URL", "http://localhost:3000"),
     "http://localhost:3000",
     "http://127.0.0.1:3000",
 ]
