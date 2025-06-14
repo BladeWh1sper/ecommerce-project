@@ -12,7 +12,6 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from app.db.database import Base
 from app.models import user, product, cart, order
 from dotenv import load_dotenv
-load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 

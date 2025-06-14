@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "DATABASE_URL=${DATABASE_URL}"
+
 alembic upgrade head
 
 PORT=${PORT:-8000}
