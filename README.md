@@ -2,7 +2,7 @@
 
 ## Установка и запуск проекта
 
-1. Клонируйте репозиторий:
+1. Клонируем репозиторий:
 
 ```
 bash
@@ -29,6 +29,7 @@ bash
 DATABASE_URL=postgresql://user:password@localhost:5432/ecommerce
 SECRET_KEY=your_secret_key
 ```
+
 поставьте свои значения
 
 4. Подготовка базы данных:
@@ -40,15 +41,33 @@ CREATE DATABASE ecommerce;
 ```
 
 5. Запуск проекта:
+
 ```
 bash
 python -m uvicorn app.main:app --reload
 ```
-6. Запуск frontend:
+6. Создание файла окружения .env для frontend:
+
+переходим в папку frontend
 
 ```
 bash
 cd frontend
+```
+
+создаем .env и заполняем:
+
+```
+bash
+REACT_APP_API_URL=http://127.0.0.1:8000/api
+```
+
+поставьте свои значения
+
+3. Запуск frontend:
+
+```
+bash
 npm install
 npm start
 ```
